@@ -1,0 +1,70 @@
+{{#if student }}
+{{> headerStudent}}
+{{else}}
+{{> headerOwner }}
+{{/if}}
+<div class="page rooms col-xs-12 col-sm-12 col-md-12">
+  <div class="rooms__content">
+    {{#if student }}
+      <div class="rooms__content-nav">
+        <a href="">Lijst</a>
+        <a href="">Kaart</a>
+        <a href="">Kenter </a>
+      </div>
+    {{/if}}
+    {{#if foundDorms}}
+      <div class="rooms__content-list">
+        {{#each dorms}}
+        <div class="box rooms__content-room" id="{{this.id}}">
+          <a href="#/rooms/{{this.id}}" class="room__link">
+            <div class="box__info room__address">
+              <p class="box__info-title"><strong>{{this.address.street}} {{this.address.number}}</strong> - {{this.address.town}}</p>
+            </div>
+            <div class="box__info room__type">
+              <p class="box__info-extra">Type: {{this.roomInfo.type}}</p>
+            </div>
+          </a>
+          <div class="box__buttons">
+            {{#if ../student}}
+              <p>€ {{this.price.rent}}<br>/maand</p>
+            {{else}}
+              <a href=""><i class="edit fas fa-pencil-alt"></i></a>
+              <a href=""><i class="delete fas fa-trash"></i></a>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+        <hr>
+      </div>
+      <div class="rooms__content-swipe hidden">
+        <div>
+          <div>
+            <img src="../images/kot.JPG" alt="">
+          </div>
+          <div>
+            <div class="box__info room__address">
+              <p class="box__info-title"><strong>{{this.address.street}} {{this.address.number}}</strong> - {{this.address.town}}</p>
+            </div>
+            <div class="box__info room__type">
+              <p class="box__info-extra">Type: {{this.roomInfo.type}}</p>
+            </div>
+            <div>
+              <a href=""><i class=""></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{else}}
+      <div class="rooms__content-norooms col-xs-12 col-sm-12 col-md-12">
+        <p>Geen koten beschikbaar</p>
+      </div>
+      {{/if}}
+      {{#if student}}
+      {{else}}
+      <div class="rooms__content-add">
+        <a href="#/rooms/add"><i  class="fas fa-plus"></i></a>
+      </div>
+      {{/if}}
+  </div>
+</div>
+{{> footer}}

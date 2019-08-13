@@ -1,0 +1,44 @@
+body {
+  overflow: hidden;
+}
+
+.home {
+  background-image: url('../images/gent_snachts.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  
+  // box-shadow: inset 0 0 0 1000px rgba(78,97,170,.8);
+  &__content {
+    background-color: #fff;
+    padding: 53px 0px; 
+
+    .logo {
+      margin: 0 auto;
+      margin-bottom: 65.2px;
+      width: 164px;
+      height: auto;
+    }
+    
+    a{
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      width: 222px;
+      padding: 13px 0;
+      background: $button-link-like-color;
+      color: #fff;
+      margin: 0 auto;
+      border-radius: 50px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 769px){
+  .home__content {
+    margin: 0 auto;
+  }
+}

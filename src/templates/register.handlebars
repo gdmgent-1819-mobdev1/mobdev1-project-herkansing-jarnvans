@@ -1,0 +1,64 @@
+<div class="register page">
+  <div class="register__content">
+    
+    <div class="register__content-title title col-xs-12 col-sm-12 col-md-12">
+      <h1>Nog geen account?<br>Registreer je nu!</h1>
+    </div>
+  
+    <form class="">
+      <div class="register__content-form form">
+        <div class="col-xs-12 col-sm-12 col-md-12 register__content-form--input form__input">
+          <input type="text" class="first-name" id="first-name" name="first-name" placeholder="Voornaam" required>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 register__content-form--input form__input">
+          <input type="text" class="last-name" id="last-name" name="last-name" placeholder="Achternaam" required>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9 register__content-form--input form__input">
+          <input type="text" class="street" id="street" name="street" placeholder="Straat" required>    
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 register__content-form--input form__input">
+          <input type="text" class="number" id="number" name="number" placeholder="Nr." required>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 register__content-form--input form__input">
+          <input type="number" class="postal-code " id="postal-code" name="postal-code" placeholder="Postcode" required>
+        </div>
+        <div class="col-xs-8 col-sm-8 col-md-8 register__content-form--input form__input">
+          <input type="text" class="city" id="city" name="city" placeholder="Stad/gemeente" required>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 register__content-form--input form__input">
+          <input type="email" class="email" id="email" name="email" placeholder="E-mail" required>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 register__content-form--input form__input">
+          <input type="password" class="password" id="password" name="password" placeholder="Wachtwoord" required>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 register__content-form--input form__input">
+          <input type="password" class="password-repeat" id="password-repeat" name="password-repeat" placeholder="Herhaal wachtwoord" required>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 register__content-form--input form__input">
+          <input type="tel" class="phone-number" id="phone-number" name="phone-number" placeholder="Telefoonnummer" required>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 register__content-form--input form__input">
+          <select id="ownerStudent" class="ownerStudent" required>
+            <option disabled selected>Student of kotbaas</option>
+            <option value="Student">Student</option>
+            <option value="Kotbaas">Kotbaas</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 register__content-form--input form__input college-input hidden">
+          <select id="college" class="college">
+            <option disabled selected>Hogeschool of universiteit</option>
+            {{#each schools}}
+              <option value="{{this.key}}">{{this.name}}</option>
+            {{/each}}
+          </select>        
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 register__content-register">
+        <input type="submit" class="send" id="send" name="send" value="Registreren">
+      </div>
+    </form>
+    <div class="col-xs-12 col-sm-12 col-md-12 register__content-login">
+      <p>Al een account? <a href="/login" data-path>Log hier in!</a></p>
+    </div>
+  </div>
+</div>

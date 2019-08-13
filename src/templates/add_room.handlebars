@@ -1,0 +1,103 @@
+{{>headerOwner}}
+<div class="addroom page">
+  <div class="addroom__content">
+    
+    <div class="addroom__content-title title col-xs-12 col-sm-12 col-md-12">
+      <h1>Voeg een kot toe!</h1>
+    </div>
+  
+    <form class="">
+      <div class="addroom__content-form form">
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input form__input">
+          <select id="roomType" class="roomType" required>
+            <option disabled selected>Type</option>
+            <option value="Kamer">Kamer</option>
+            <option value="Studio">Studio</option>
+          </select>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9 addroom__content-form--input same-line form__input">
+          <input type="text" class="street" id="street" name="street" placeholder="Straat" required>    
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 addroom__content-form--input form__input">
+          <input type="text" class="number" id="number" name="number" placeholder="Nr." required>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 addroom__content-form--input form__input">
+          <input type="number" class="postal-code " id="postal-code" name="postal-code" placeholder="Postcode" required>
+        </div>
+        <div class="col-xs-8 col-sm-8 col-md-8 addroom__content-form--input form__input">
+          <input type="text" class="city" id="city" name="city" placeholder="Stad/gemeente" required>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 addroom__content-form--input form__input">
+          <input type="number" class="rent-price" id="rent-price" name="rent-price" placeholder="Huurprijs" required>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 addroom__content-form--input form__input">
+          <input type="number" class="guarantee" id="guarantee" name="guarantee" placeholder="Waarborg" required>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 addroom__content-form--input form__input">
+          <input type="number" class="acreage" id="acreage" name="acreage" placeholder="Oppervlakte (m²)" required>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 addroom__content-form--input form__input">
+          <input type="number" class="level" id="level" name="level" placeholder="Verdieping" required>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 addroom__content-form--input form__input">
+          <input type="number" class="persons" id="persons" name="persons" placeholder="Aantal personen" required>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 addroom__content-form--input form__input">
+          <input type="number" class="rooms" id="rooms" name="rooms" placeholder="Aantal kamers" required>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input form__input">
+          <select id="toilet" class="toilet" required>
+            <option disabled selected>Toilet</option>
+            <option value="Privé">Toilet - privé</option>
+            <option value="Gedeeld">Toilet - gedeeld</option>
+            <option value="Niet aanwezig">Toilet - niet aanwezig</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input form__input">
+          <select id="shower" class="shower" required>
+            <option disabled selected>Douche</option>
+            <option value="Privé">Douche - privé</option>
+            <option value="Gedeeld">Douche - gedeeld</option>
+            <option value="Niet aanwezig">Douche - niet aanwezig</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input form__input">
+          <select id="bath" class="bath" required>
+            <option disabled selected>Bad</option>
+            <option value="Privé">Bad - privé</option>
+            <option value="Gedeeld">Bad - gedeeld</option>
+            <option value="Niet aanwezig">Bad - niet aanwezig</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input form__input">
+          <select id="kitchen" class="kitchen" required>
+            <option disabled selected>Keuken</option>
+            <option value="Privé">Keuken - privé</option>
+            <option value="Gedeeld">Keuken - gedeeld</option>
+            <option value="Niet aanwezig">Keuken - niet aanwezig</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input form__input">
+          <select id="furniture" class="furniture" required>
+            <option disabled selected>Bemeubeld of niet-bemeubeld</option>
+            <option value="Bemeubeld">Bemeubeld</option>
+            <option value="Niet-bemeubeld">Niet-bemeubeld</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input description-furniture-input form__input hidden">
+          <textarea name="description-furniture" class="description-furniture" id="description-furniture" placeholder="Beschrijving meubels"></textarea>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input form__input">
+          <textarea name="extra" id="extra" class="extra" placeholder="Beschrijving, opmerkingen, ..."></textarea>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-form--input form__input">
+          <input type="file" class="images" id="images" name="images" value="foto's" multiple>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 addroom__content-addroom">
+        <input type="submit" class="send" id="send" name="send" value="Toevoegen">
+      </div>
+    </form>
+  </div>
+</div>
+{{>footer}}

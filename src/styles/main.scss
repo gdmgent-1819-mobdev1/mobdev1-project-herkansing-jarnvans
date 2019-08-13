@@ -1,0 +1,31 @@
+@import "../../node_modules/mapbox-gl/dist/mapbox-gl.css";
+
+@import 
+    "./abstracts/colors",
+    "./abstracts/fonts";
+
+@import
+    "./base/core";
+
+@import 
+    "./layout/page",
+    "./layout/form",
+    "./layout/grid",
+    "./layout/box",
+    "./layout/list";
+
+@import 
+    "./components/header",
+    "./components/footer";
+
+// pages
+@import 
+    "./pages/about",
+    "./pages/home",
+    "./pages/register",
+    "./pages/login",
+    "./pages/password-reset",
+    "./pages/profile",
+    "./pages/rooms",
+    "./pages/add-rooms",
+    "./pages/detail";

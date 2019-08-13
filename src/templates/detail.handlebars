@@ -1,0 +1,160 @@
+{{#if student}}
+{{> headerStudent}}
+{{else}}
+{{> headerOwner }}
+{{/if}}
+<div class="page list detail">
+  <div class="list__content">
+    <div class="list__content-image detail__content-image">
+      <img src="../../src/images/kot.jpg" alt="kot-pic">
+      <div class="detail__content-price">
+        <p>€ {{room.price.rent}}/<br>maand</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title detail__title">
+        <h1>Info kamer</h1>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-envelope"></i>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <h2>Type kamer</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.type }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <h2>Verdieping</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.level }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <h2>Aantal personen</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.persons }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title type">
+        <h2>Toilet</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.toilet }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title type">
+        <h2>Douche</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.shower }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title type">
+        <h2>Bad</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.bath }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title type">
+        <h2>Keuken</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.kitchen }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title type">
+        <h2>Waarborg</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>€ {{ room.price.guarantee }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title type">
+        <h2>Bemeubeld</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.furniture }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title type">
+        <h2>Beschrijving meubels</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.descriptionFurniture }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title type">
+        <h2>Extra</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.extra }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-12 col-sm-12 col-md-12 list__content-property--title detail__title">
+        <h1>Info pand</h1>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <h2>Adres</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.address.street }} {{ room.address.number }}<br>{{ room.address.postcode }} {{ room.address.town }}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <h2>Oppervlakte</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{ room.roomInfo.acreage }} m²</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <h2>Aantal kamers/studios</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{room.roomInfo.rooms}}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <h2>Eigenaar</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <p>{{user.firstName}} {{user.lastName}}</p>
+      </div>
+    </div>
+    <div class="list__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title detail__title">
+        <h1>Share this kot!</h1>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 list__content-property--title">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-pinterest"></i>
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer }}

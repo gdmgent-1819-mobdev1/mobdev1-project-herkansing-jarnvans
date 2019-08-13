@@ -1,0 +1,70 @@
+.box {
+  border: 1px solid $title-menu-color;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+
+  &:first-child {
+    margin-top: 15px;
+  }
+
+  &__info {
+    text-align: left;
+    color: $title-menu-color;
+    
+    &-title {
+      font-size: 15px;
+    }
+
+    &-extra {
+      font-size: 15px;
+      font-family: $content-font;
+    }
+  }
+
+  &__buttons {
+    display: inline-flex;
+
+    p {
+      font-size: 15px;
+      text-align: right;
+      color: $button-link-like-color;
+
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    i {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      border: 1px solid $button-link-like-color;
+      border-radius: 50%;
+      padding: 10px;
+      color: $button-link-like-color;
+      font-size: 20px;
+      text-align: center;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &.delete {
+        color: $dislike-delete-color;
+        border-color: $dislike-delete-color;
+      }
+    }
+  }
+}
+
+.room__link {
+  display: block;
+  width:100%;
+  text-decoration: none;
+
+}
+
+

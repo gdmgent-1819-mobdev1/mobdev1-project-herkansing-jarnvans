@@ -1,0 +1,57 @@
+.form {
+  margin: 0 auto;
+  padding-right: 37px;
+
+  &__input {
+    margin: 0 auto;
+    margin-bottom: 11px;
+    padding: 0 25px;
+    input, select, textarea {
+      -ms-box-sizing:content-box;
+      -moz-box-sizing:content-box;
+      -webkit-box-sizing:content-box; 
+      box-sizing:content-box;
+      width: 100%;
+      padding: 10px 18px;
+      border: 1px solid $form-color;
+      border-radius: 50px;
+      font-family: $content-font;
+      font-weight: 300;
+      font-size: 16px;
+      background: #fff;
+    }
+
+    textarea {
+      border-radius: 30px;
+      height: 120px;
+    }
+
+    
+    input[type=number] {
+      -moz-appearance:textfield;
+    }
+  }
+}
+.send {
+  display: block;
+  float: center;
+  width: 222px;
+  border: 1px solid $button-link-like-color;
+  margin: 0 auto;
+
+  padding: 13px 0;
+  background: $button-link-like-color;
+  color: #fff;
+  border-radius: 50px;
+  font-family: $title-font; 
+  font-size: 20px;
+  text-align: center;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.hidden {
+  display: none;
+}

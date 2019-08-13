@@ -1,0 +1,30 @@
+.register {
+
+  &__content {
+    
+    &-login {
+      p {
+        font-family: $content-font;
+        font-weight: 300;
+        font-size: 15px;
+        text-align: center;
+        color: $form-color;
+
+        & > a {
+          text-decoration: none;
+          color: $button-link-like-color;
+
+          &:hover {
+            color: $form-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px){
+  // .street {
+  //   width: 100%;
+  // }
+}

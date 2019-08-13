@@ -1,17 +1,27 @@
 import Navigo from 'navigo';
 import handlebars, { compile } from 'handlebars';
-import './styles/main.sass';
+import './styles/main.scss';
 
 import routes from './routes';
 
 // Partials
-const header = require('./partials/header.handlebars');
+const headerOwner = require('./partials/headerOwner.handlebars');
+const headerStudent = require('./partials/headerStudent.handlebars');
 const footer = require('./partials/footer.handlebars');
 
 // Register the partial components
-handlebars.registerPartial('header', compile(header)({ title: 'Just another web app' }));
-handlebars.registerPartial('footer', compile(footer)({ text: 'Template made with love by GDM Ghent' }));
+// functions.getCurrentUser()
+//   .then((user) => {
+//     const { type } = user;
+//     let student = false;
+//     if (type === 'student') {
+//       student = true;
+//     }
+//     console.log(type);
 
+handlebars.registerPartial('headerOwner', compile(headerOwner)({}));
+handlebars.registerPartial('headerStudent', compile(headerStudent)({}));
+handlebars.registerPartial('footer', compile(footer)({}));
 // Router logic to load the correct template when needed
 const router = new Navigo(window.location.origin, true);
 

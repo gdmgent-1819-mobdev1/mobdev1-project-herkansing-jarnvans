@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: $title-font;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 auto;
+  background: #fefefe;
+  
+  #app {
+      min-height: 100%;
+      position: relative;
+
+      .title {
+        margin-bottom: 15px;
+        text-align: center;
+        h1 {
+          font-size: 20px;
+          color: $title-menu-color;
+        }
+      }
+  }
+  #map {
+      top: 0;
+      bottom: 0;
+      width: 500px;
+      height: 200px;
+      text-align: initial;
+      margin: 0 auto;
+  }
+}

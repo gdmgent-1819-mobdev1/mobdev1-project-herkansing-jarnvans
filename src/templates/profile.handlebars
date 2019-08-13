@@ -1,0 +1,58 @@
+{{#if student}}
+{{> headerStudent}}
+{{else}}
+{{> headerOwner }}
+{{/if}}
+<div class="page profile">
+  <div class="profile__content">
+    <div class="profile__content-image">
+      <img src="../../src/images/user-image-.png" alt="profile-pic">
+    </div>
+    <div class="profile__content-name">
+      <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+    </div>
+    <div class="profile__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+        <h2>Adres</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+        <p>{{ user.address.street }} {{ user.address.number }}<br>{{ user.address.postcode }} {{ user.address.town }}</p>
+      </div>
+    </div>
+    <div class="profile__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+        <h2>E-mail</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+        <p>{{ firstPartEmail }}<br> {{ lastPartEmail }}</p>
+      </div>
+    </div>
+    <div class="profile__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+        <h2>Telefoonnummer</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+        <p>{{ user.phoneNumber }}</p>
+      </div>
+    </div>
+    <div class="profile__content-property">
+      <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title type">
+        <h2>Type</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+        <p>{{ user.type }}</p>
+      </div>
+    </div>
+    {{#if student}}
+      <div class="profile__content-property">
+        <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+          <h2>Universiteit/<br>hogeschool</h2>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 profile__content-property--title">
+          <p>{{ nameSchool }}</p>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</div>
+{{> footer }}
