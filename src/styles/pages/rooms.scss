@@ -28,6 +28,10 @@ body {
       }
     }
 
+    &-swipe {
+      display: inline-flex;
+    }
+
     &-add{
       position: fixed;
       bottom: 108px;

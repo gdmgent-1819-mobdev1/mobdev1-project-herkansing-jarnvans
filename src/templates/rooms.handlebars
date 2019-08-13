@@ -7,13 +7,13 @@
   <div class="rooms__content">
     {{#if student }}
       <div class="rooms__content-nav">
-        <a href="">Lijst</a>
-        <a href="">Kaart</a>
-        <a href="">Kenter </a>
+        <a class="list-link">Lijst</a>
+        <a class="map-link">Kaart</a>
+        <a class="tinder-link">Kenter </a>
       </div>
     {{/if}}
     {{#if foundDorms}}
-      <div class="rooms__content-list">
+      <div class="rooms__content-list list hidden">
         {{#each dorms}}
         <div class="box rooms__content-room" id="{{this.id}}">
           <a href="#/rooms/{{this.id}}" class="room__link">
@@ -36,20 +36,29 @@
         {{/each}}
         <hr>
       </div>
-      <div class="rooms__content-swipe hidden">
-        <div>
+      <div class="map hidden">
+        Dit is de kaart
+      </div>
+      <div class="tinder">
+        <div class="rooms__content-swipe">
           <div>
-            <img src="../images/kot.JPG" alt="">
-          </div>
-          <div>
-            <div class="box__info room__address">
-              <p class="box__info-title"><strong>{{this.address.street}} {{this.address.number}}</strong> - {{this.address.town}}</p>
-            </div>
-            <div class="box__info room__type">
-              <p class="box__info-extra">Type: {{this.roomInfo.type}}</p>
+            <div>
+              <img src="../images/kot.JPG" alt="">
             </div>
             <div>
-              <a href=""><i class=""></i></a>
+              <div class="box__info room__address">
+                <p class="box__info-title"><strong>{{this.address.street}} {{this.address.number}}</strong> - {{this.address.town}}</p>
+              </div>
+              <div class="box__info room__type">
+                <p class="box__info-extra">Type: {{this.roomInfo.type}}</p>
+              </div>
+              <div class="box__buttons">
+                <p>€ {{this.price.rent}}<br>/maand</p>
+              </div>
+              <div>
+                <a class="home__button" href=""><i class=""></i></a>
+                <a class="home__button" href=""><i class=""></i></a>
+              </div>
             </div>
           </div>
         </div>
