@@ -77,9 +77,9 @@ const getRooms = (id, student) => {
           roomsArray.forEach((room) => {
             if (room.ownerId === id) {
               roomsUser.push(room);
-              resolve(roomsUser);
             }
           });
+          resolve(roomsUser);
         }
         resolve(roomsArray);
       })
