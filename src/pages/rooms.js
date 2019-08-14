@@ -22,7 +22,6 @@ const showSearchOption = (showElement, firstHideElement, secondHideElement) => {
 
 const checkExists = (favorites, roomId) => {
   let exists = false;
-  console.log(favorites);
   favorites.forEach((favorit) => {
     if (favorit === roomId) {
       exists = true;
