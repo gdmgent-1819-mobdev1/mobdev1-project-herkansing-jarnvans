@@ -95,7 +95,7 @@ const signOut = (e) => {
     .then(() => {
       localStorage.removeItem('currentUserId');
       localStorage.removeItem('type');
-      window.location.replace('/#');
+      window.location.replace('#/');
     })
     .catch((error) => {
       console.log(error);
