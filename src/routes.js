@@ -9,6 +9,7 @@ import ProfileView from './pages/profile';
 import RoomsView from './pages/rooms';
 import AddRoomView from './pages/add_room';
 import DetailRoomView from './pages/detail';
+import FavoritesRoomView from './pages/favorites';
 
 export default [
   { path: '/', view: HomeView },
@@ -21,4 +22,5 @@ export default [
   { path: '/rooms', view: RoomsView },
   { path: '/rooms/add', view: AddRoomView },
   { path: '/rooms/:id', view: DetailRoomView },
+  { path: '/favorites', view: FavoritesRoomView },
 ];

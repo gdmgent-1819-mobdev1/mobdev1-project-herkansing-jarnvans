@@ -41,7 +41,6 @@ const getFavorites = (userId) => {
           user.favorites.forEach((favorit) => {
             favoritesArray.push(favorit);
           });
-          console.log(favoritesArray);
           resolve(favoritesArray);
         }
         resolve(favoritesArray);
@@ -55,7 +54,6 @@ const getFavorites = (userId) => {
 const getRoomAndLike = (dorms, student, foundDorm, user) => {
   getFavorites(user)
     .then((favorites) => {
-      console.log(favorites);
       const favoritArray = favorites;
       if (foundDorm) {
         let foundDorms = foundDorm;
@@ -85,7 +83,6 @@ const getRoomAndLike = (dorms, student, foundDorm, user) => {
               e.preventDefault();
               dormsPassed += 1;
               getRoomAndLike(dorms, student, foundDorms, user);
-              console.log(dormsPassed);
               addClickables(dorms, student, foundDorms, user);
             }, false);
           } else {
@@ -121,24 +118,12 @@ const addClickables = (dorms, student, foundDorms, user) => {
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 11,
       });
-        console.log(dorms);
-        dorms.forEach((dorm) => {
-          const maker = new mapboxgl.Marker()
-            .setLngLat([dorm.coords.longitude, dorm.coords.latitude])
-            .addTo(map);
-          // featuresArray.push({
-          //     "type": "Feature",
-          //     "geometry": {
-          //     "type": "Point",
-          //     "coordinates": [dorm.coordinates.longitude, dorm.coordinates.latitude]
-          //   },
-          //     "properties": {
-          //       "title": "Kot",
-          //       "icon": "marker"
-          //   }
-          // })
-        });
 
+      dorms.forEach((dorm) => {
+        const marker = new mapboxgl.Marker()
+          .setLngLat([dorm.coords.longitude, dorm.coords.latitude])
+          .addTo(map);
+      });
     } else {
       console.error('Mapbox will crash the page if no access token is given.');
     }
