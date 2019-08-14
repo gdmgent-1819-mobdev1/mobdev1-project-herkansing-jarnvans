@@ -13,7 +13,7 @@
       </div>
     {{/if}}
     {{#if foundDorms}}
-      <div class="rooms__content-list list hidden">
+      <div class="rooms__content-list list">
         {{#each dorms}}
         <div class="box rooms__content-room" id="{{this.id}}">
           <a href="#/rooms/{{this.id}}" class="room__link">
@@ -36,33 +36,39 @@
         {{/each}}
         <hr>
       </div>
+      {{#if student}}
       <div class="map hidden">
-        Dit is de kaart
+        <div id="map-box" class="map-box">
+
+        </div>
       </div>
-      <div class="tinder">
+      <div class="tinder hidden">
         <div class="rooms__content-swipe">
           <div>
-            <div>
-              <img src="../images/kot.JPG" alt="">
+            <div class="list__content-image detail__content-image">
+              <img src="../../src/images/kot.jpg" alt="">
             </div>
-            <div>
+            <div class="room">
               <div class="box__info room__address">
-                <p class="box__info-title"><strong>{{this.address.street}} {{this.address.number}}</strong> - {{this.address.town}}</p>
+                <p class="box__info-title"><strong>{{room.address.street}} {{room.address.number}}</strong> - {{room.address.town}}</p>
               </div>
               <div class="box__info room__type">
-                <p class="box__info-extra">Type: {{this.roomInfo.type}}</p>
+                <p class="box__info-extra">Type: {{room.roomInfo.type}}</p>
               </div>
               <div class="box__buttons">
-                <p>€ {{this.price.rent}}<br>/maand</p>
+                <p>€ {{room.price.rent}}<br>/maand</p>
               </div>
-              <div>
-                <a class="home__button" href=""><i class=""></i></a>
-                <a class="home__button" href=""><i class=""></i></a>
+            </div>
+            <div>
+              <div class="swipe__buttons">
+                <a class="yes__button" href=""><i class="fas fa-home"></i></a>
+                <a class="no__button" href=""><i class="fas fa-times"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {{/if}}
       {{else}}
       <div class="rooms__content-norooms col-xs-12 col-sm-12 col-md-12">
         <p>Geen koten beschikbaar</p>

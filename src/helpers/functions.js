@@ -110,12 +110,6 @@ const getUserType = () => {
   return false;
 };
 
-const getAllRooms = () => {
-  return new Promise((resolve, reject) => {
-    database.ref('rooms')
-  })
-}
-
 export default {
   showElement,
   getCoordinatesFromAddress,
